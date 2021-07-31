@@ -1,3 +1,12 @@
+
+:root {
+  --light-green: #D6F8B8;
+  --dark-green: #8FBBAF;
+  --purple: #827397;
+  --light-blue: #6B7B8E;
+  --dark-blue: #363062;
+}
+
 html,
 body {
   padding: 0;
@@ -8,6 +17,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--light-green);
 }
 
 * {

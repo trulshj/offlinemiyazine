@@ -169,7 +169,6 @@
 
     .screen {
         margin-top: 20px;
-        max-height: 70vh;
     }
 
     .screenContent {
@@ -179,5 +178,18 @@
     .screenContent img {
         display: block;
         margin: auto;
+    }
+
+    .credit{
+        position: relative;
+    }
+
+    .footer {
+        margin-top: 20px;
+        position: relative;
+        text-align: right;
+        bottom: 0px;
+        right: 0px;
+        margin-left: auto;
     }
 }

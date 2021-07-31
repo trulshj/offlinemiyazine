@@ -64,35 +64,40 @@ export default function Layout({ children, shortTitle }) {
                                 <Image src={windowSvg} />
                             </div>
                             <Link href="/">
-                            <div className={styles.titleBtn}>
-                                <Image src={closeSvg} />
-                            </div>
+                                <div className={styles.titleBtn}>
+                                    <Image src={closeSvg} />
+                                </div>
                             </Link>
                         </div>
                     </div>
                     <div className={styles.screenContent}>{children}</div>
                 </div>
+                <footer className={styles.footer}>
+                    <a
+                        href="https://twitter.com/chinenmiyazine"
+                        target="_blank"
+                    >
+                        <Image src={twitterLogo} />
+                    </a>
+                    <a
+                        href="https://chinenmiyazine.tumblr.com/"
+                        target="_blank"
+                    >
+                        <Image src={tumblrLogo} />
+                    </a>
+                    <span>@chinenmiyazine</span>
+                </footer>
+                <footer className={styles.credit}>
+                    website and hosting by{" "}
+                    <a href="https://github.com/trulshj" target="_blank">
+                        @trulshj
+                    </a>{" "}
+                    and{" "}
+                    <a href="https://fishnobi.tumblr.com" target="_blank">
+                        @fishnobi
+                    </a>
+                </footer>
             </main>
-
-            <footer className={styles.footer}>
-                <a href="https://twitter.com/chinenmiyazine" target="_blank">
-                    <Image src={twitterLogo} />
-                </a>
-                <a href="https://chinenmiyazine.tumblr.com/" target="_blank">
-                    <Image src={tumblrLogo} />
-                </a>
-                <span>@chinenmiyazine</span>
-            </footer>
-            <footer className={styles.credit}>
-                website and hosting by{" "}
-                <a href="https://github.com/trulshj" target="_blank">
-                    @trulshj
-                </a>{" "}
-                and{" "}
-                <a href="https://fishnobi.tumblr.com" target="_blank">
-                    @fishnobi
-                </a>
-            </footer>
         </div>
     );
 }

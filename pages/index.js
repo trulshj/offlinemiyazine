@@ -16,8 +16,8 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
     return (
-        <Layout title="interest stuff">
-            <h1>Testing testing</h1>
+        <Layout shortTitle="Offline">
+            <h1>A free online Miya Zine</h1>
             <ul className={utilStyles.list}>
                 {allPostsData.map(({ id, date, title }) => (
                     <li className={utilStyles.listItem} key={id}>

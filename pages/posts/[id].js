@@ -5,9 +5,9 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
   return (
-    <Layout title={postData.title}>
+    <Layout shortTitle={postData.shortTitle}>
       <Head>
-        <title>{postData.title}</title>
+        <title>{postData.shortTitle}</title>
       </Head>
       <article>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

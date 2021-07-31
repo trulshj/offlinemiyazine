@@ -12,7 +12,7 @@ import tumblrLogo from "../public/tumblr.svg";
 
 let nums = ["01", "02", "03", "04", "05", "06", "07", "08", "→"];
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, shortTitle }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -21,7 +21,10 @@ export default function Layout({ children, title }) {
                     name="description"
                     content="A SK8 Zine about Miya Chinen!"
                 />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                ></meta>
                 <link rel="icon" href="/favicon.ico?v=2" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
@@ -52,7 +55,7 @@ export default function Layout({ children, title }) {
                 </div>
                 <div className={styles.screen}>
                     <div className={styles.titleBar}>
-                        <div class={styles.title}>{title}</div>
+                        <div class={styles.title}>{shortTitle}</div>
                         <div className={styles.titleBtns}>
                             <div className={styles.titleBtn}>
                                 <Image src={minimizeSvg} />
@@ -60,14 +63,14 @@ export default function Layout({ children, title }) {
                             <div className={styles.titleBtn}>
                                 <Image src={windowSvg} />
                             </div>
+                            <Link href="/">
                             <div className={styles.titleBtn}>
                                 <Image src={closeSvg} />
                             </div>
+                            </Link>
                         </div>
                     </div>
-                    <div className={styles.screenContent}>
-                        {children}
-                    </div>
+                    <div className={styles.screenContent}>{children}</div>
                 </div>
             </main>
 

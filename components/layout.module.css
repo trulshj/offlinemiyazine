@@ -36,6 +36,7 @@
     width: 100%;
     font-weight: 900;
     font-family: Orbitron, sans-serif;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
 }
 
 .numberBtn-active {
@@ -169,6 +170,7 @@
 
     .screen {
         margin-top: 20px;
+        min-height: 100%;
     }
 
     .screenContent {

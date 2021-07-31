@@ -69,6 +69,7 @@
     border: 2px solid var(--dark-blue);
     background-color: var(--dark-green);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
+    max-height: 85vh;
 }
 
 .titleBar {
@@ -106,6 +107,7 @@
     margin-left: 1rem;
     color: var(--dark-blue);
     font-size: 2.3rem;
+    overflow: auto;
 }
 
 .screenContentTitle {
@@ -137,7 +139,7 @@
 
 @media screen and (max-width: 900px) {
     .main {
-        margin: 0 14px 0 14px;
+        margin: 0 14px 200px 14px;
         padding-top: 0;
         display: flex;
         flex-direction: column;
@@ -147,17 +149,34 @@
     .burger {
         flex: 1;
         margin: 2px;
-        max-width: 100%;
+        width: auto;
+        min-width: 76px;
+
     }
 
     .numberBtnsWrapper {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-        align-items: space-between;
+        align-items: space-evenly;
+        margin-top: 10px;
     }
 
     .title {
         font-size: clamp(1.2rem, 8vw - 2rem, 2.3rem);
+    }
+
+    .screen {
+        margin-top: 20px;
+        max-height: 70vh;
+    }
+
+    .screenContent {
+        font-size: 1.3rem;
+    }
+
+    .screenContent img {
+        display: block;
+        margin: auto;
     }
 }

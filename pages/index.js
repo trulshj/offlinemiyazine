@@ -17,11 +17,11 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
     return (
         <Layout shortTitle="Offline">
-            <h1>A free online Miya Zine</h1>
+            <h1>A FREEONLINE MIYA ZINE</h1>
             <ul className={utilStyles.list}>
-                {allPostsData.map(({ id, date, title }) => (
+                {allPostsData.map(({ id, date, title, shortTitle, showInList }) => showInList == 'true' ? (
                     <li className={utilStyles.listItem} key={id}>
-                        <Link href={`/posts/${id}`}>
+                        <Link href={`/${id}`}>
                             <a>{title}</a>
                         </Link>
                         <br />
@@ -29,7 +29,7 @@ export default function Home({ allPostsData }) {
                             <Date dateString={date} />
                         </small>
                     </li>
-                ))}
+                ) : "")}
             </ul>
         </Layout>
     );

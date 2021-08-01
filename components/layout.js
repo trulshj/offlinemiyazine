@@ -10,9 +10,27 @@ import closeSvg from "../public/close.svg";
 import twitterLogo from "../public/twitter.svg";
 import tumblrLogo from "../public/tumblr.svg";
 
-let nums = ["01", "02", "03", "04", "05", "06", "07", "08", "→"];
+import React, { useState } from "react";
+
+let buttons = [
+    { id: "01", label: "Home", link: "home" },
+    { id: "02", label: "About", link: "about" },
+    { id: "03", label: "Schedule", link: "schedule" },
+    { id: "04", label: "Rules", link: "rules" },
+    { id: "05", label: "Mods", link: "mods" },
+    /* { id: "06", label: "", link: "" },
+    { id: "07", label: "", link: "" },
+    { id: "08", label: "", link: "" },
+    { id: "09", label: "", link: "" }, */
+];
+
+function toggleShowButtons() {
+    showButtons = !showButtons;
+    console.log(showButtons);
+}
 
 export default function Layout({ children, shortTitle }) {
+    const [open, setOpen] = useState(true);
     return (
         <div className={styles.container}>
             <Head>
@@ -45,11 +63,19 @@ export default function Layout({ children, shortTitle }) {
             <main className={styles.main}>
                 <div className={styles.left}>
                     <div className={styles.numberBtnsWrapper}>
-                        <button className={styles.burger}>≡</button>
-                        {nums.map((n) => (
-                            <button key={n} className={styles.numberBtn}>
-                                {n}
-                            </button>
+                        <button
+                            className={styles.burger}
+                            onClick={() => setOpen(!open)}
+                        >
+                            ≡
+                        </button>
+                        {buttons.map((b) => (
+                            <Link href={`/${b.link}`}>
+                                <button key={b.id} className={styles.numberBtn + `${open ? ` ${styles.wideButton}` : ""}`}>
+                                    {b.id}
+                                    {open ? ` ${b.label}` : ""}
+                                </button>
+                            </Link>
                         ))}
                     </div>
                 </div>

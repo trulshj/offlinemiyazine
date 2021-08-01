@@ -6,7 +6,7 @@
 .main {
     margin: 0 20px 20px 0;
     padding-top: 50px;
-    display: grid;
+    display: flex;
     grid-template-columns: 10% 1fr;
     height: 80vh;
 }
@@ -17,7 +17,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: left;
+    transition: height .3s ease-in-out;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .numberBtnsWrapper {
@@ -25,9 +28,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 9;
 }
 
 .numberBtn {
+    flex: 1;
+    z-index: 10;
     border: 2px solid var(--dark-blue);
     background-color: var(--dark-green);
     margin: 2px 0;
@@ -35,37 +41,41 @@
     color: var(--purple);
     width: 100%;
     font-weight: 900;
+    text-align: center;
     font-family: Orbitron, sans-serif;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
 }
 
-.numberBtn-active {
-    border: 2px solid var(--dark-blue);
-    background-color: var(--light-green);
-    margin: 2px 0;
-    font-size: 2.4rem;
-    color: var(--purple);
-    width: 4rem;
-}
-
-.numberBtn:hover {
-    cursor: pointer;
-    background-color: var(--light-green);
+.wideButton {
+    flex: auto !important;
+    white-space: nowrap;
+    text-align: left;
 }
 
 .burger {
     width: 100%;
     border: 2px solid var(--dark-blue);
-    background-color: var(--light-green);
+    background-color: var(--dark-green);
     margin: 2px 0;
     font-size: 2.4rem;
     color: var(--purple);
+    transition: flex .3s ease-in-out;
+    text-align: center;
+}
+
+.numberBtn:hover, .burger:hover {
+    cursor: pointer;
+    background-color: var(--light-green);
+}
+
+.numberBtn, .burger {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
 }
 
 /* Screen */
 
 .screen {
     display: grid;
+    flex: 1;
     grid-template-rows: 3em 1fr;
     border: 2px solid var(--dark-blue);
     background-color: var(--dark-green);
@@ -139,7 +149,7 @@
 
 /* Phone Styles */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .main {
         margin: 0 14px 200px 14px;
         padding-top: 0;
@@ -147,21 +157,33 @@
         flex-direction: column;
     }
 
-    .numberBtn,
     .burger {
         flex: 1;
         margin: 2px;
-        width: auto;
+        width: 100%;
         min-width: 76px;
+    }
 
+    .numberBtn {
+        position: absolute;
+        z-index: -10;
+        visibility:collapse;
     }
 
     .numberBtnsWrapper {
-        flex-wrap: wrap;
-        flex-direction: row;
         justify-content: center;
         align-items: space-evenly;
         margin-top: 10px;
+        max-width: none;
+        width: 100%;
+    }
+
+    .wideButton {
+        z-index: 10;
+        width: 100%;
+        margin: 2px;
+        position: relative;
+        visibility: visible;
     }
 
     .title {
@@ -171,6 +193,7 @@
     .screen {
         margin-top: 20px;
         min-height: 100%;
+        flex-grow: 0;
     }
 
     .screenContent {

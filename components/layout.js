@@ -15,19 +15,16 @@ import React, { useState } from "react";
 let buttons = [
     { id: "01", label: "Home", link: "" },
     { id: "02", label: "About", link: "about" },
-    { id: "03", label: "Schedule", link: "schedule" },
-    { id: "04", label: "Rules", link: "rules" },
-    { id: "05", label: "Mods", link: "mods" },
+    { id: "03", label: "FAQ", link: "faq" },
+    { id: "04", label: "Schedule", link: "schedule" },
+    { id: "05", label: "Rules", link: "rules" },
+    { id: "06", label: "Mods", link: "mods" },
     /* { id: "06", label: "", link: "" },
     { id: "07", label: "", link: "" },
     { id: "08", label: "", link: "" },
     { id: "09", label: "", link: "" }, */
 ];
 
-function toggleShowButtons() {
-    showButtons = !showButtons;
-    console.log(showButtons);
-}
 
 export default function Layout({ children, shortTitle }) {
     const [open, setOpen] = useState(false);

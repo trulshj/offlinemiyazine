@@ -13,7 +13,7 @@ import tumblrLogo from "../public/tumblr.svg";
 import React, { useState } from "react";
 
 let buttons = [
-    { id: "01", label: "Home", link: "home" },
+    { id: "01", label: "Home", link: "" },
     { id: "02", label: "About", link: "about" },
     { id: "03", label: "Schedule", link: "schedule" },
     { id: "04", label: "Rules", link: "rules" },

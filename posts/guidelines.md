@@ -1,6 +1,6 @@
 ---
-title: 'Rules'
-shortTitle: 'Rules'
+title: 'Guidelines'
+shortTitle: 'Guidelines'
 date: '2021-08-01'
 showInList: 'false'
 ---

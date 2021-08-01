@@ -25,7 +25,6 @@ let buttons = [
     { id: "09", label: "", link: "" }, */
 ];
 
-
 export default function Layout({ children, shortTitle }) {
     const [open, setOpen] = useState(false);
     return (
@@ -68,7 +67,14 @@ export default function Layout({ children, shortTitle }) {
                         </button>
                         {buttons.map((b) => (
                             <Link href={`/${b.link}`}>
-                                <button key={b.id} className={styles.numberBtn + `${open ? ` ${styles.wideButton}` : ""}`}>
+                                <button
+                                    key={b.id}
+                                    onClick={() => setOpen(false)}
+                                    className={
+                                        styles.numberBtn +
+                                        `${open ? ` ${styles.wideButton}` : ""}`
+                                    }
+                                >
                                     {b.id}
                                     {open ? ` ${b.label}` : ""}
                                 </button>

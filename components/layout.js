@@ -17,7 +17,7 @@ let buttons = [
     { id: "02", label: "About", link: "about" },
     { id: "03", label: "FAQ", link: "faq" },
     { id: "04", label: "Schedule", link: "schedule" },
-    { id: "05", label: "Rules", link: "rules" },
+    { id: "05", label: "Guidelines", link: "guidelines" },
     { id: "06", label: "Mods", link: "mods" },
     /* { id: "06", label: "", link: "" },
     { id: "07", label: "", link: "" },

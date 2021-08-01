@@ -30,7 +30,7 @@ function toggleShowButtons() {
 }
 
 export default function Layout({ children, shortTitle }) {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     return (
         <div className={styles.container}>
             <Head>

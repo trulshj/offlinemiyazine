@@ -133,6 +133,10 @@
     color: var(--purple);
 }
 
+.screenContent a:hover {
+    color: var(--light-green);
+}
+
 .screenContentTitle {
     letter-spacing: 8px;
 }

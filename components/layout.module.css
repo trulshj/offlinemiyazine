@@ -130,6 +130,7 @@
 
 .screenContent a {
     font-weight: bold;
+    color: var(--purple);
 }
 
 .screenContentTitle {

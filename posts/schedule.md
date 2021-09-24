@@ -9,16 +9,18 @@ showInList: 'false'
 
 * ➡ **Interest Check:** August 1 - September 1
 
-* ➡ **Contributor Applications:** September 10 - October 15
+* ➡ **Contributor Applications:** September 24 - October 29
 
-* ➡ **Pitches Due:** October 31
+* ➡ **Email Sent Out:** October 30 - October 31
 
-* ➡ **Check-In #1 (25%):** November 20
+* ➡ **Pitches Due:** November 14
 
-* ➡ **Check-In #2 (50%):** December 12
+* ➡ **Check-In #1 (25%):** December 4
 
-* ➡ **Check-In #3 (90%):** January 15
+* ➡ **Check-In #2 (50%):** December 26
 
-* ➡ **Final Submissions:** January 25
+* ➡ **Check-In #3 (90%):** January 29
+
+* ➡ **Final Submissions:** February 3
 
 * ➡ **Zine Release:** February 22 (Miya’s birthday!)
